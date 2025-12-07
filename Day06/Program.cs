@@ -117,40 +117,6 @@ namespace Day05
                 sum += tempMul;
 
             }
-
-
-
-
-
-
-
-            /*
-            List<List<int>> numberRows = new List<List<int>>();
-            string operatorStr = lines[lines.Length - 1];
-            List<string> operators = operatorStr.Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
-
-            List<List<string>> numbersCols = new List<List<string>>();
-            for (int i = 0; i < operators.Count; i++)
-            {
-                List<string> numberCol = new List<string>();
-                for (int j = 0; j < lines.Length - 1; j++)
-                {
-                    List<string> linesList = lines[j].Split(" ", StringSplitOptions.RemoveEmptyEntries).ToList();
-                    numberCol.Add(linesList[i]);
-                }
-                numbersCols.Add(numberCol);
-            }
-
-
-            foreach(var col in numbersCols)
-            {
-                foreach(var num in col)
-                {
-                    Console.WriteLine(num);
-                }
-                Console.WriteLine("----");
-            }
-            */
             return sum;
         }
     }
