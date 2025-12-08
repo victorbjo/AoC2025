@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.ExceptionServices;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace Day05
+namespace Day07
 {
     class Program
     {
@@ -125,29 +125,20 @@ namespace Day05
                 {
                     if (long.TryParse(charList[i][j], out _))
                     {
-                        //long current = int.TryParse(charList[i][j], out _) ? long.Parse(charList[i][j]) : 0;
                         if (charList[i + 1][j] == "^")
                         {
                             addNum(charList, (i + 1, j + 1), long.Parse(charList[i][j]));
                             addNum(charList, (i + 1, j - 1), long.Parse(charList[i][j]));
-                            //charList[i + 1][j + 1] = "|";
-                            //charList[i + 1][j - 1] = "|";
                         }
                         else
                         {
                             addNum(charList, (i + 1, j), long.Parse(charList[i][j]));
-                            //charList[i + 1][j] = "|";
                         }
                     }
                 }
 
 
             }
-            /*for (int i = 0; i < charList.Count(); i++)
-            {
-
-                Console.WriteLine(string.Join("   ",charList[i]));
-            }*/
             long sums = 0;
             for (int i = 0; i < charList[charList.Count()-1].Length; i++)
             {
